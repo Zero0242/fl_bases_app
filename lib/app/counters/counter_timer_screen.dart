@@ -21,7 +21,7 @@ class _CounterTimerScreenState extends State<CounterTimerScreen> {
       _timer?.cancel();
     } else {
       _timer = Timer.periodic(Duration(seconds: 1), (ts) {
-        _counter = _counter + ts.tick;
+        _counter = ts.tick;
         print(_counter);
       });
     }
@@ -38,7 +38,7 @@ class _CounterTimerScreenState extends State<CounterTimerScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('You have waite $_counter seconds'),
+            Text('You have waited $_counter seconds'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
