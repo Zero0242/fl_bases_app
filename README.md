@@ -53,4 +53,5 @@ Links de librerias utilizadas
 
 - [Flutter]("https://flutter.dev/")
 - [Instalaciones Recomendadas](https://gist.github.com/Klerith/2917b2a21ea9c4bfa5d1070c89a89ec7)
+- [Curso de Flutter](https://youtube.com/playlist?list=PLCKuOXG0bPi0sIn-nDsi7ma9OV6MEMkxj&si=xejn52WbuFGgbMnD)
 - [Emulador en Línea](https://zapp.run/new)
