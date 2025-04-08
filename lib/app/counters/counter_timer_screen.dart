@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+// * Para experimentar el life cycle de un Widget
+
 class CounterTimerScreen extends StatefulWidget {
   const CounterTimerScreen({super.key});
 
