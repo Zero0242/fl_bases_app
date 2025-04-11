@@ -16,8 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      // * Configuraciones de navegacion, en formato
+      // * { rutastring : (context) => Componente() }
       routes: {
         HomeScreen.route: (context) => HomeScreen(),
+        // * Ruta con argumentos
         CounterScreen.route: (context) {
           final count = ModalRoute.of(context)!.settings.arguments as int?;
           return CounterScreen(initialCount: count);

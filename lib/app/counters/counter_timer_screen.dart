@@ -15,6 +15,7 @@ class CounterTimerScreen extends StatefulWidget {
 }
 
 class _CounterTimerScreenState extends State<CounterTimerScreen> {
+  // TODO: implementar evento de limpieza al timer (metodo "dispose()" del State)
   int _counter = 0;
   Timer? _timer;
 
