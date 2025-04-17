@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics_app/app/routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,63 +11,114 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Home Screen')),
-      body: Column(
-        children: <Widget>[
-          Text('Contadores'),
-          Divider(),
-          ListTile(
-            title: Text('Contador'),
-            onTap: () {
-              // * Navigator con rutas nombradas, valor static `route`
-              // Navigator.of(context).pushNamed( CounterScreen.route );
-            },
-            trailing: Icon(Icons.chevron_right),
-          ),
-          ListTile(
-            title: Text('Contador 10'),
-            onTap: () {
-              // * Navigator con rutas nombradas, valor static `route`
-              // * Pasando argumentos a la ruta
-              // Navigator.of(context).pushNamed( CounterScreen.route , arguments: 10 );
-            },
-            trailing: Icon(Icons.chevron_right),
-          ),
-          ListTile(
-            title: Text('Contador 25'),
-            // TODO: implementar ruta correspondiente
-            onTap: () {},
-            trailing: Icon(Icons.chevron_right),
-          ),
-          ListTile(
-            title: Text('Contador 50'),
-            // TODO: implementar ruta correspondiente
-            onTap: () {},
-            trailing: Icon(Icons.chevron_right),
-          ),
-          ListTile(
-            title: Text('Contador 75'),
-            // TODO: implementar ruta correspondiente
-            onTap: () {},
-            trailing: Icon(Icons.chevron_right),
-          ),
-          ListTile(
-            title: Text('Contador 10 25 50 75 100'),
-            onTap: () {
-              // * Navigator con varias rutas concatenadas
-              // Navigator.of(context)
-              // ..pushNamed( CounterScreen.route , arguments: 10 )
-              // ..pushNamed( CounterScreen.route , arguments: 25 )
-              // ..pushNamed( CounterScreen.route , arguments: 50 )
-            },
-            trailing: Icon(Icons.chevron_right),
-          ),
-          ListTile(
-            title: Text('Contador con timer'),
-            // TODO: implementar ruta correspondiente
-            onTap: () {},
-            trailing: Icon(Icons.chevron_right),
-          ),
-        ],
+      // * Forma para hacer scrollable un elemento column
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Text('Contadores'),
+            Divider(),
+            ListTile(
+              title: Text('Contador'),
+              onTap: () {
+                Navigator.of(context).pushNamed(CounterScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Contador 10'),
+              onTap: () {
+                Navigator.of(
+                  context,
+                ).pushNamed(CounterScreen.route, arguments: 10);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Contador 25'),
+              onTap: () {
+                Navigator.of(
+                  context,
+                ).pushNamed(CounterScreen.route, arguments: 25);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Contador 50'),
+              onTap: () {
+                Navigator.of(
+                  context,
+                ).pushNamed(CounterScreen.route, arguments: 50);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Contador 75'),
+              onTap: () {
+                Navigator.of(
+                  context,
+                ).pushNamed(CounterScreen.route, arguments: 75);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Contador 10 25 50 75 100'),
+              onTap: () {
+                Navigator.of(context)
+                  ..pushNamed(CounterScreen.route, arguments: 10)
+                  ..pushNamed(CounterScreen.route, arguments: 25)
+                  ..pushNamed(CounterScreen.route, arguments: 50)
+                  ..pushNamed(CounterScreen.route, arguments: 75)
+                  ..pushNamed(CounterScreen.route, arguments: 100);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Contador con timer'),
+              onTap: () {
+                Navigator.of(context).pushNamed(CounterTimerScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            SizedBox(height: 40),
+            Text('Layouts'),
+            Divider(),
+            ListTile(
+              title: Text('Vertical Layout'),
+              onTap: () {
+                Navigator.of(context).pushNamed(VerticalLayoutScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Horizontal Layout'),
+              onTap: () {
+                Navigator.of(context).pushNamed(HorizontalLayoutScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Grid Layout'),
+              onTap: () {
+                Navigator.of(context).pushNamed(GridLayoutScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Stack Layout'),
+              onTap: () {
+                Navigator.of(context).pushNamed(StackLayoutScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              title: Text('Scrollable Layout'),
+              onTap: () {
+                Navigator.of(context).pushNamed(ScrollableLayoutScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
+          ],
+        ),
       ),
     );
   }

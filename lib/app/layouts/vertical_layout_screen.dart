@@ -9,8 +9,18 @@ class VerticalLayoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Title')),
-      body: Center(child: Text('VerticalLayoutScreen Screen body')),
+      appBar: AppBar(title: Text('Vertical Layout')),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Text('Elementos apilados verticalmente'),
+            FlutterLogo(),
+            Divider(),
+            Icon(Icons.people),
+            CircularProgressIndicator(),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -9,8 +9,18 @@ class HorizontalLayoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Title')),
-      body: Center(child: Text('HorizontalLayoutScreen Screen body')),
+      appBar: AppBar(title: Text('Horizontal Layout')),
+      body: Center(
+        child: Row(
+          children: <Widget>[
+            Text('Elementos apilados horizontalmente'),
+            FlutterLogo(),
+            Divider(),
+            Icon(Icons.people),
+            CircularProgressIndicator(),
+          ],
+        ),
+      ),
     );
   }
 }
