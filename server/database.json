@@ -1,0 +1,143 @@
+{
+	"profiles": [
+		{
+			"id": 1,
+			"name": "John",
+			"lastname": "Doe",
+			"created_at": 1696118400,
+			"avatar": null,
+			"isblocked": false
+		},
+		{
+			"id": 2,
+			"name": "Jane",
+			"lastname": "Smith",
+			"avatar": "https://picsum.photos/2",
+			"created_at": 1696204800,
+			"isblocked": false
+		},
+		{
+			"id": 3,
+			"name": "Alice",
+			"lastname": "Johnson",
+			"avatar": null,
+			"created_at": 1696291200,
+			"isblocked": true
+		},
+		{
+			"id": 4,
+			"name": "Bob",
+			"lastname": "Brown",
+			"avatar": "https://picsum.photos/4",
+			"created_at": 1696377600,
+			"isblocked": false
+		},
+		{
+			"id": 5,
+			"name": "Charlie",
+			"lastname": "Davis",
+			"avatar": null,
+			"created_at": 1696464000,
+			"isblocked": true
+		}
+	],
+	"notifications": [
+		{
+			"id": 1,
+			"title": "Notification 1",
+			"description": "This is the description of notification 1.",
+			"isImportant": true,
+			"viewed": false
+		},
+		{
+			"id": 2,
+			"title": "Notification 2",
+			"description": "This is the description of notification 2.",
+			"isImportant": false,
+			"viewed": true
+		},
+		{
+			"id": 3,
+			"title": "Notification 3",
+			"description": "This is the description of notification 3.",
+			"isImportant": true,
+			"viewed": false
+		},
+		{
+			"id": 4,
+			"title": "Notification 4",
+			"description": "This is the description of notification 4.",
+			"isImportant": false,
+			"viewed": true
+		},
+		{
+			"id": 5,
+			"title": "Notification 5",
+			"description": "This is the description of notification 5.",
+			"isImportant": true,
+			"viewed": false
+		}
+	],
+	"posts": [
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440000",
+			"title": "First Post",
+			"description": "This is the description of the first post.",
+			"created_at": 1697040000
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440001",
+			"title": "Second Post",
+			"description": "This is the description of the second post.",
+			"created_at": 1697043600
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440002",
+			"title": "Third Post",
+			"description": "This is the description of the third post.",
+			"created_at": 1697047200
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440003",
+			"title": "Fourth Post",
+			"description": "This is the description of the fourth post.",
+			"created_at": 1697050800
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440004",
+			"title": "Fifth Post",
+			"description": "This is the description of the fifth post.",
+			"created_at": 1697054400
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440005",
+			"title": "Sixth Post",
+			"description": "This is the description of the sixth post.",
+			"created_at": 1697058000
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440006",
+			"title": "Seventh Post",
+			"description": "This is the description of the seventh post.",
+			"created_at": 1697061600
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440007",
+			"title": "Eighth Post",
+			"description": "This is the description of the eighth post.",
+			"created_at": 1697065200
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440008",
+			"title": "Ninth Post",
+			"description": "This is the description of the ninth post.",
+			"created_at": 1697068800
+		},
+		{
+			"id": "550e8400-e29b-41d4-a716-446655440009",
+			"title": "Tenth Post",
+			"description": "This is the description of the tenth post.",
+			"created_at": 1697072400
+		}
+	]
+}
