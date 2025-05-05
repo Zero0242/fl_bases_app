@@ -50,4 +50,4 @@ app.*.map.json
 node_modules/
 package-lock.json
 yarn.lock
-server/database.json
+server/*
