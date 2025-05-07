@@ -117,6 +117,17 @@ class HomeScreen extends StatelessWidget {
               },
               trailing: Icon(Icons.chevron_right),
             ),
+            SizedBox(height: 40),
+            Text('Formularios'),
+            Divider(),
+            ListTile(
+              title: Text('Formulario Simple'),
+              subtitle: Text('Inputs y validación simple'),
+              onTap: () {
+                Navigator.of(context).pushNamed(SimpleFormScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
           ],
         ),
       ),

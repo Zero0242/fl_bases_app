@@ -19,5 +19,7 @@ class AppRouter {
     HorizontalLayoutScreen.route: (context) => HorizontalLayoutScreen(),
     StackLayoutScreen.route: (context) => StackLayoutScreen(),
     ScrollableLayoutScreen.route: (context) => ScrollableLayoutScreen(),
+    // * Rutas de formulario
+    SimpleFormScreen.route: (context) => SimpleFormScreen(),
   };
 }
