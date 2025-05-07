@@ -15,19 +15,6 @@ Prueba de cosas básicas en flutter
 2. Instalar los paquetes de Flutter con `flutter pub get`
 3. Ejecutar el proyecto con `flutter run` o con `F5`
 
-## Fake Server (Formularios)
-
-> Requiere NODEJS
-
-> Para realizar operaciones "CRUD" con un servidor falso
-
-1. Instalar dependencias con `npm install`
-2. Ejecutar `npm start` para levantar el servidor en el puerto 3000
-3. Url del api `http://localhost:3000`
-   - /posts
-   - /notifications
-   - /profiles
-
 ## Requisitos
 
 1. Tener instalado Flutter
