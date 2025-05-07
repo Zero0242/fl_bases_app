@@ -21,5 +21,6 @@ class AppRouter {
     ScrollableLayoutScreen.route: (context) => ScrollableLayoutScreen(),
     // * Rutas de formulario
     SimpleFormScreen.route: (context) => SimpleFormScreen(),
+    NotificationFormScreen.route: (context) => NotificationFormScreen(),
   };
 }

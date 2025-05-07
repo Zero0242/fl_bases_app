@@ -128,6 +128,14 @@ class HomeScreen extends StatelessWidget {
               },
               trailing: Icon(Icons.chevron_right),
             ),
+            ListTile(
+              title: Text('Formulario 2'),
+              subtitle: Text('Inputs y otros tipos de fields'),
+              onTap: () {
+                Navigator.of(context).pushNamed(NotificationFormScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
           ],
         ),
       ),

@@ -18,7 +18,7 @@ class _SimpleFormScreenState extends State<SimpleFormScreen> {
   final _descriptionController = TextEditingController();
 
   void _onSubmit() async {
-    if (_formKey.currentState?.validate() ?? false) return;
+    if (_formKey.currentState?.validate() != true) return;
     final timestamp = DateTime.now().millisecondsSinceEpoch;
     final formData = {
       "id": timestamp.toString(),
