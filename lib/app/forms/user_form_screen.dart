@@ -8,8 +8,8 @@ import 'package:image_picker/image_picker.dart';
 class UserFormScreen extends StatefulWidget {
   const UserFormScreen({super.key});
 
-  /// App Route is: `/forms/simple`
-  static const String route = '/forms/simple';
+  /// App Route is: `/forms/user`
+  static const String route = '/forms/user';
 
   @override
   State<UserFormScreen> createState() => _UserFormScreenState();
