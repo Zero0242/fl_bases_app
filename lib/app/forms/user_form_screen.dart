@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_basics_app/helpers/plugins/plugins.dart';
 
 class UserFormScreen extends StatefulWidget {
   const UserFormScreen({super.key});
@@ -63,26 +64,32 @@ class _UserFormScreenState extends State<UserFormScreen> {
             spacing: 20,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              // Foto de perfil
-              Center(
-                child: Badge(
-                  label: InkWell(
-                    onTap: () {
-                      print('Seleccionar nueva foto de perfil');
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.camera, color: Colors.white),
+              SizedBox(
+                height: 150,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      radius: 75,
+                      backgroundImage:
+                          _previewImage != null
+                              ? MemoryImage(_previewImage!)
+                              : NetworkImage(placeholderURL),
                     ),
-                  ),
-                  alignment: Alignment(1, 0.5),
-                  child: CircleAvatar(
-                    radius: 75,
-                    backgroundImage:
-                        _previewImage == null
-                            ? NetworkImage(placeholderURL)
-                            : MemoryImage(_previewImage!),
-                  ),
+                    Align(
+                      alignment: Alignment(0.5, 1),
+                      child: IconButton.filled(
+                        onPressed: () async {
+                          final picked =
+                              await PickerPlugin.showImagePickerModal(context);
+                          if (picked == null) return;
+                          _previewImage = await picked.readAsBytes();
+                          setState(() {});
+                        },
+                        icon: Icon(Icons.camera),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               TextFormField(
