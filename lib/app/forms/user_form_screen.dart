@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_basics_app/helpers/plugins/plugins.dart';
+import 'package:image_picker/image_picker.dart';
 
 class UserFormScreen extends StatefulWidget {
   const UserFormScreen({super.key});
@@ -19,6 +21,8 @@ class _UserFormScreenState extends State<UserFormScreen> {
   final _nameController = TextEditingController();
   final _lastnameController = TextEditingController();
   bool isBlocked = false;
+  // * Datos relacionados a imagen de perfil
+  XFile? _fileRef;
   Uint8List? _previewImage;
 
   void _onSubmit() async {
@@ -83,6 +87,7 @@ class _UserFormScreenState extends State<UserFormScreen> {
                           final picked =
                               await PickerPlugin.showImagePickerModal(context);
                           if (picked == null) return;
+                          _fileRef = picked;
                           _previewImage = await picked.readAsBytes();
                           setState(() {});
                         },
