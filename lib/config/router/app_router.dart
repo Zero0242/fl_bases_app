@@ -22,5 +22,6 @@ class AppRouter {
     // * Rutas de formulario
     SimpleFormScreen.route: (context) => SimpleFormScreen(),
     NotificationFormScreen.route: (context) => NotificationFormScreen(),
+    UserFormScreen.route: (context) => UserFormScreen(),
   };
 }

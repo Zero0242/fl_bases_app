@@ -8,3 +8,4 @@ export 'layouts/vertical_layout_screen.dart';
 export 'home_screen.dart';
 export 'forms/simple_form_screen.dart';
 export 'forms/notification_form_screen.dart.dart';
+export 'forms/user_form_screen.dart';

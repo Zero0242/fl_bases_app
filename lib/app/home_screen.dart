@@ -136,6 +136,14 @@ class HomeScreen extends StatelessWidget {
               },
               trailing: Icon(Icons.chevron_right),
             ),
+            ListTile(
+              title: Text('Formulario 3'),
+              subtitle: Text('Inputs y fields complejos'),
+              onTap: () {
+                Navigator.of(context).pushNamed(UserFormScreen.route);
+              },
+              trailing: Icon(Icons.chevron_right),
+            ),
           ],
         ),
       ),
